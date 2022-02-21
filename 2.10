@@ -1,0 +1,11 @@
+docker run -dit \
+  --name qinglong \
+  --hostname qinglong \
+  --restart always \
+  -p 5701:5700 \
+  -v $pwd/ql/config:/ql/config \
+  -v $pwd/ql/log:/ql/log \
+  -v $pwd/ql/db:/ql/db \
+  -v $pwd/ql/scripts:/ql/scripts \
+  -v $pwd/ql/jbot:/ql/jbot \
+  whyour/qinglong:2.10
